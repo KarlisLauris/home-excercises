@@ -1,0 +1,11 @@
+Index: homework-exercises/src/main/java/io/codelex/loops/NumberSquare.java
+===================================================================
+diff --git a/homework-exercises/src/main/java/io/codelex/loops/NumberSquare.java b/homework-exercises/src/main/java/io/codelex/loops/NumberSquare.java
+--- a/homework-exercises/src/main/java/io/codelex/loops/NumberSquare.java	
++++ b/homework-exercises/src/main/java/io/codelex/loops/NumberSquare.java	
+@@ -1,4 +1,4 @@
+-package io.codelex.loops;
++package main.java.io.codelex.loops;
+ 
+ import java.util.Scanner;
+ 
