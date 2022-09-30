@@ -1,0 +1,2731 @@
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise7.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise7.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise7.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise7.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,18 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-import java.util.Scanner;
+-
+-public class Exercise7 {
+-    public static void main(String[] args) {
+-        Scanner sc = new Scanner(System.in);
+-        System.out.println("Enter a string!");
+-        String input = sc.nextLine();
+-        int counter = 0;
+-        for (int i = 0; i < input.length(); i++) {
+-            if (Character.isUpperCase(input.charAt(i))) {
+-                counter++;
+-            }
+-        }
+-        System.out.println("The number of uppercase letters is " + counter);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/CheckOddEven.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/CheckOddEven.java b/homework-exercises/src/io/codelex/arithmetic/CheckOddEven.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/CheckOddEven.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,13 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-public class CheckOddEven {
+-    public static void main(String[] args) {
+-        int number = 6;
+-        if(number % 2 == 0) {
+-            System.out.println("Number is even");
+-        } else {
+-            System.out.println("Number is odd");
+-        }
+-        System.out.println("Bye!");
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/examples/NullExample.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/examples/NullExample.java b/homework-exercises/src/io/codelex/typesandvariables/examples/NullExample.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/examples/NullExample.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,11 +0,0 @@
+-package io.codelex.typesandvariables.examples;
+-
+-public class NullExample {
+-    public static void main(String[] args) {
+-        //wont even compile
+-        //int primitiveInteger = null;
+-
+-        Integer integer = null;
+-        System.out.println(integer.toString());
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/practice/README.md
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/README.md b/homework-exercises/src/io/codelex/arithmetic/practice/README.md
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/README.md	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,130 +0,0 @@
+-# Practice
+-
+-# Exercise #1 
+-
+-Write a Java program to accept two integers and return true if the either one is 15 or if their sum or difference is 15.
+-
+-# Exercise #2
+-
+-Write a program called CheckOddEven which prints "Odd Number" if the int variable “number” is odd, or “Even Number” otherwise. The program shall always print “bye!” before exiting.
+-
+-# Exercise #3 
+-
+-See [SumAverageRunningInt.java](./SumAverageRunningInt.java)
+-
+-Write a program called SumAverageRunningInt to produce the sum of 1, 2, 3, ..., to 100. Store 1 and 100 in variables lowerbound and upperbound, so that we can change their values easily. Also compute and display the average. The output shall look like:
+-
+-```
+-The sum of 1 to 100 is 5050
+-The average is 50.5
+-```
+-
+-# Exercise #4
+-
+-Write a program called Product1ToN to compute the product of integers from 1 to 10 (i.e., 1×2×3×...×10), as an int. Take a note that it is the same as factorial of N.
+-
+-# Exercise #5
+-
+-Write a program that picks a random number from 1-100. Give the user a chance to guess it. If they get it right, tell them so. If their guess is higher than the number, say "Too high." If their guess is lower than the number, say "Too low." Then quit. (They don't get any more guesses for now.)
+-
+-```
+-I'm thinking of a number between 1-100.  Try to guess it.
+-> 13
+-
+-Sorry, you are too low.  I was thinking of 34.
+-```
+-
+-```
+-I'm thinking of a number between 1-100.  Try to guess it.
+-> 79
+-
+-Sorry, you are too high.  I was thinking of 51.
+-```
+-
+-```
+-I'm thinking of a number between 1-100.  Try to guess it.
+-> 42
+-
+-You guessed it!  What are the odds?!?
+-```
+-
+-# Exercise #6
+-
+-Write a program called CozaLozaWoza which prints the numbers 1 to 110, 11 numbers per line. The program shall print "Coza" in place of the numbers which are multiples of 3, "Loza" for multiples of 5, "Woza" for multiples of 7, "CozaLoza" for multiples of 3 and 5, and so on. The output shall look like:
+-
+-```
+-1 2 Coza 4 Loza Coza Woza 8 Coza Loza 11 
+-Coza 13 Woza CozaLoza 16 17 Coza 19 Loza CozaWoza 22 
+-23 Coza Loza 26 Coza Woza 29 CozaLoza 31 32 Coza
+-```
+-
+-# Exercise #7
+-
+-See [GravityCalculator.java](./GravityCalculator.java)
+-
+-Modify the example program to compute the position of an object after falling for 10 seconds, outputting the position in
+-meters. The formula in Math notation is:
+-
+-![Gravity formula](./gravity-formula.png)
+-
+-*Note:* The correct value is -490.5m.
+-
+-# Exercise #8
+-
+-Foo Corporation needs a program to calculate how much to pay their hourly employees. The US Department of Labor
+-requires that employees get paid time and a half for any hours over 40 that they work in a single week. For example, if an
+-employee works 45 hours, they get 5 hours of overtime, at 1.5 times their base pay. The State of Massachusetts requires
+-that hourly employees be paid at least $8.00 an hour. Foo Corp requires that an employee not work more than 60 hours in
+-a week. 
+-
+-## Summary
+-
+- - An employee gets paid (hours worked) × (base pay), for each hour up to 40 hours.
+- - For every hour over 40, they get overtime = (base pay) × 1.5.
+- - The base pay must not be less than the minimum wage ($8.00 an hour). If it is, print an error.
+- - If the number of hours is greater than 60, print an error message.
+-
+-Write a method that takes the base pay and hours worked as parameters, and prints the total pay or an error. Write a main
+-method that calls this method for each of these employees:
+-
+-| Employee | Base Pay | Hours Worked |
+-| --- | --- | --- |
+-| Employee 1 | $7.50 | 35 |
+-| Employee 2 | $8.20 | 47 |
+-| Employee 3 | $10.00 | 73 |
+-
+-# Exercise #9
+-
+-Write a program that calculates and displays a person's body mass index (BMI). A person's BMI is calculated with the following formula: ```BMI = weight x 703 / height ^ 2```. Where weight is measured in pounds and height is measured in inches. Display a message indicating whether the person has optimal weight, is underweight, or is overweight. A sedentary person's weight is considered optimal if his or her BMI is between 18.5 and 25. If the BMI is less than 18.5, the person is considered underweight. If the BMI value is greater than 25, the person is considered overweight.
+-
+-Your program must accept metric units.
+-
+-# Exercise #10
+-
+-See [CalculateArea.java](./CalculateArea.java)
+-
+-Design a Geometry class with the following methods:
+-
+-- A static method that accepts the radius of a circle and returns the area of the circle. Use the following formula:
+-  - Area = π * r * 2
+-  - Use Math.PI for π and r for the radius of the circle
+-- A static method that accepts the length and width of a rectangle and returns the area of the rectangle. Use the following formula:
+-  - Area = Length x Width
+-- A static method that accepts the length of a triangle’s base and the triangle’s height. The method should return the area of the triangle. Use the following formula:
+-  - Area = Base x Height x 0.5
+-  
+-The methods should display an error message if negative values are used for the circle’s radius, the rectangle’s length or width, or the triangle’s base or height.
+-
+-Next write a program to test the class, which displays the following menu and responds to the user’s selection:
+-
+-```
+-Geometry calculator:
+-
+-Calculate the Area of a Circle
+-Calculate the Area of a Rectangle
+-Calculate the Area of a Triangle
+-Quit
+-Enter your choice (1-4):
+-```
+-
+-Display an error message if the user enters a number outside the range of 1 through 4 when selecting an item from the menu.
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/arithmetic/practice/SumAverageRunningInt.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/SumAverageRunningInt.java b/homework-exercises/src/io/codelex/arithmetic/practice/SumAverageRunningInt.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/SumAverageRunningInt.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,17 +0,0 @@
+-package io.codelex.arithmetic.practice;
+-
+-public class SumAverageRunningInt {
+-    public static void main(String[] args) {
+-        int sum = 0;
+-        double average;
+-        int lowerBound = 1;
+-        int upperBound = 100;
+-
+-        for (int number = lowerBound; number <= upperBound; ++number) {
+-            sum += number;
+-        }
+-        average = (double)sum / upperBound;
+-        System.out.println("The sum of 1 to 100 is " + sum);
+-        System.out.println("The average is " + average);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/practice/Casting.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/practice/Casting.java b/homework-exercises/src/io/codelex/typesandvariables/practice/Casting.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/practice/Casting.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,32 +0,0 @@
+-package io.codelex.typesandvariables.practice;
+-
+-public class Casting {
+-    public static void main(String[] args) {
+-        first();
+-        second();
+-    }
+-
+-    private static void first() {
+-        String a = "1";
+-        int b = 2;
+-        int c = 3;
+-        double d = 4;
+-        float e = 5;
+-
+-        //fixme - should be 15 :| 
+-        int sum = (int) (Integer.parseInt(a) + b + c + d + e);
+-        System.out.println(sum);
+-    }
+-
+-    private static void second() {
+-        String a = "1";
+-        int b = 2;
+-        int c = 3;
+-        double d = 4.2;
+-        float e = 5.3f;
+-
+-        //fixme - should be 15.5 :| 
+-        float sum = (float) (Float.parseFloat(a) + b + c + d + e);
+-        System.out.println(sum);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/practice/Exercise5.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/Exercise5.java b/homework-exercises/src/io/codelex/arithmetic/practice/Exercise5.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/Exercise5.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,19 +0,0 @@
+-package io.codelex.arithmetic.practice;
+-
+-import java.util.Scanner;
+-
+-public class Exercise5 {
+-    public static void main(String[] args){
+-        Scanner sc = new Scanner(System.in);
+-        System.out.println("I'm thinking of a number between 1-100.  Try to guess it.");
+-        int number = (int) (Math.random() * 100) + 1;
+-        int guess = sc.nextInt();
+-        if (guess == number) {
+-            System.out.println("You guessed it!  What are the odds?!?");
+-        } else if (guess < number) {
+-            System.out.println("Sorry, you are too low.  I was thinking of " + number);
+-        } else{
+-            System.out.println("Sorry, you are too high.  I was thinking of " + number);
+-        }
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise6.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise6.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise6.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise6.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,17 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-import java.util.Scanner;
+-
+-public class Exercise6 {
+-    public static void main(String[] args) {
+-        Scanner sc = new Scanner(System.in);
+-        int sum = 0;
+-        int number = 1;
+-        while (number != 0) {
+-            System.out.print("Enter a number: ");
+-            number = sc.nextInt();
+-            sum += number;
+-        }
+-        System.out.println("The sum is " + sum);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/practice/GravityCalculator.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/GravityCalculator.java b/homework-exercises/src/io/codelex/arithmetic/practice/GravityCalculator.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/GravityCalculator.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,12 +0,0 @@
+-package io.codelex.arithmetic.practice;
+-
+-public class GravityCalculator {
+-    public static void main(String[] arguments) {
+-        double gravity = -9.81;  // Earth's gravity in m/s^2
+-        double initialVelocity = 0.0;
+-        double fallingTime = 10.0;
+-        double initialPosition = 0.0;
+-        double finalPosition = 0.5 * gravity*Math.pow(fallingTime,2)+initialVelocity*fallingTime+initialPosition;
+-        System.out.println("The object's position after " + fallingTime + " seconds is " + finalPosition + " m.");
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/practice/VariablesAndNames.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/practice/VariablesAndNames.java b/homework-exercises/src/io/codelex/typesandvariables/practice/VariablesAndNames.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/practice/VariablesAndNames.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,29 +0,0 @@
+-package io.codelex.typesandvariables.practice;
+-
+-import java.text.DecimalFormat;
+-
+-public class VariablesAndNames {
+-    public static void main(String[] args) {
+-        DecimalFormat formatting = new DecimalFormat("0.00");
+-
+-        int cars, drivers, passengers, carsNotDriven, carsDriven;
+-        double seatsInACar, carpoolCapacity,averagePassengersPerCar;
+-
+-        cars = 100; //cars
+-        seatsInACar = 4; //seats in a car
+-        drivers = 30; // drivers
+-        passengers = 90; // passengers
+-        carsNotDriven = cars - drivers; // free cars
+-        carsDriven = drivers; // cars driven at the moment
+-        carpoolCapacity = carsDriven * seatsInACar; // carpool capacity
+-        averagePassengersPerCar = (double)passengers / carsDriven; // average passengers per car
+-
+-        System.out.println("There are " + cars + " cars available.");
+-        System.out.println("There are only " + drivers + " drivers available.");
+-        System.out.println("There will be " + carsNotDriven + " empty cars today.");
+-        System.out.println("We can transport " + formatting.format(carpoolCapacity) + " people today.");
+-        System.out.println("We have " + passengers + " to carpool today.");
+-        System.out.println("We need to put about " + formatting.format( averagePassengersPerCar) + " in each car.");
+-    }
+-
+-}
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/typesandvariables/practice/MoreVariablesAndPrinting.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/practice/MoreVariablesAndPrinting.java b/homework-exercises/src/io/codelex/typesandvariables/practice/MoreVariablesAndPrinting.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/practice/MoreVariablesAndPrinting.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,24 +0,0 @@
+-package io.codelex.typesandvariables.practice;
+-
+-public class MoreVariablesAndPrinting {
+-    public static void main(String[] args) {
+-
+-        String Name, Eyes, Teeth, Hair;
+-        Name = "Zed A. Shaw";
+-        int Age = 35;
+-        double Height = 74*2.54;
+-        double Weight = 180*0.453592;
+-        Eyes = "Blue";
+-        Teeth = "White";
+-        Hair = "Brown";
+-
+-        System.out.println("Let's talk about " + Name + ".");
+-        System.out.println("He's " + Height + " centimeters  tall.");
+-        System.out.println("He's " + Weight + " kilos heavy.");
+-        System.out.println("Actually, that's not too heavy.");
+-        System.out.println("He's got " + Eyes + " eyes and " + Hair + " hair.");
+-        System.out.println("His teeth are usually " + Teeth + " depending on the coffee.");
+-        System.out.println("If I add " + Age + ", " + Height + ", and " + Weight
+-                + " I get " + (Age + Height + Weight) + ".");
+-    }
+-}
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/typesandvariables/practice/README.md
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/practice/README.md b/homework-exercises/src/io/codelex/typesandvariables/practice/README.md
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/practice/README.md	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,89 +0,0 @@
+-
+-## Exercise #1
+-
+-See [VariablesAndNames.java](./VariablesAndNames.java)
+-
+-- Clean up the code
+-  - It is a rule to use [camelcase](https://en.wikipedia.org/wiki/Camel_case) when naming variables
+-  - Best practice is to use single variable per type assignment.
+-  - Are these comments needed there?
+-- When is *int* and *double* used incorrectly? Change it.
+-- Keep two digits after decimal separator.
+-
+-## Exercise #2
+-
+-See [MoreVariablesAndPrinting.java](./MoreVariablesAndPrinting.java)
+-
+-- Clean up the code
+-- Change all the variables so there isn't the *my* in front.
+-- Convert the inches and pounds to centimeters and kilos.
+-  - 1 inch = 2.54 cm
+-  - 1 pound = 0.453592 kg
+-- Keep two digits after decimal separator.
+-
+-## Exercise #3
+-
+-See [Casting.java](./Casting.java)
+-
+-## Exercise #4
+-
+-Write a program that stores your name and year of birth into variables, and displays their values on the screen.
+-
+-Make sure that you use two variables, and that the variable that holds your name is the best type for such a variable, and that the variable that holds the year is the best type for that variable.
+-
+-Also make sure that your variable names are good: the name of a variable should always relate to its contents.
+-
+-```
+-My name is Juan Valdez and I was born in 1995.
+-```
+-
+-## Exercise #5
+-
+-Use several variables to store the names of your classes and their teachers. Then, display a nice little table displaying your schedule.	Just FYI, my column of courses has a width of 26 characters, and the teacher column has a width of 15. The first and last lines are a plus sign, fifty dashes (a.k.a. minus signs) and another plus sign.
+-
+-Your table doesn't need to look exactly like this, or even line up. I used a total of sixteen variables (course1, course2, ... course8, teacher1, teacher2, etc.). You should do the same.
+-
+-```
+-+------------------------------------------------------------+
+-| 1 |                          English III |       Ms. Lapan |
+-| 2 |                          Precalculus |     Mrs. Gideon |
+-| 3 |                         Music Theory |       Mr. Davis |
+-| 4 |                        Biotechnology |      Ms. Palmer |
+-| 5 |           Principles of Technology I |      Ms. Garcia |
+-| 6 |                             Latin II |    Mrs. Barnett |
+-| 7 |                        AP US History | Ms. Johannessen |
+-| 8 | Business Computer Infomation Systems |       Mr. James |
+-+------------------------------------------------------------+
+-```
+-
+-## Exercise #6
+-
+-Write a program that asks the user to enter a series of single digit numbers and calculate the sum of all the numbers.
+-
+-## Exercise #7
+-
+-Write a program that prompts the user to enter a string and displays the number of the uppercase letters in the string.
+-
+-## Exercise #8
+-
+-Write a Java program to convert minutes into a number of years and days.
+-
+-## Exercise #9
+-
+-Write a Java program to takes the user for a distance (in meters) and the time was taken (as three numbers: hours, minutes, seconds), and display the speed, in meters per second, kilometers per hour and miles per hour (hint: 1 mile = 1609 meters).
+-
+-```
+-Test Data
+-Input distance in meters: 2500 
+-Input hour: 5 
+-Input minutes: 56
+-Input seconds: 23
+-Expected Output :
+-Your speed in meters/second is 0.11691531 
+-Your speed in km/h is 0.42089513 
+-Your speed in miles/h is 0.26158801
+-```
+-
+-## Exercise #10
+-
+-See [SadFor.java](./SadFor.java)
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/arithmetic/practice/Geometry.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/Geometry.java b/homework-exercises/src/io/codelex/arithmetic/practice/Geometry.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/Geometry.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,34 +0,0 @@
+-package io.codelex.arithmetic.practice;
+-
+-import io.codelex.NoCodeWrittenException;
+-
+-import java.math.BigDecimal;
+-
+-class Geometry {
+-    static double areaOfCircle(BigDecimal radius) {
+-        if (radius.compareTo(BigDecimal.ZERO) <= 0) {
+-            throw new Error("Radius must be positive");
+-        }
+-        return Math.PI *radius.doubleValue()*2;
+-    }
+-
+-    static double areaOfRectangle(BigDecimal length, BigDecimal width) {
+-        if (length.compareTo(BigDecimal.ZERO) <= 0) {
+-            throw new Error("Length must be positive");
+-        }
+-        if (width.compareTo(BigDecimal.ZERO) <= 0) {
+-            throw new Error("Width must be positive");
+-        }
+-        return length.multiply(width).doubleValue();
+-    }
+-
+-    static double areaOfTriangle(BigDecimal base, BigDecimal h) {
+-        if (base.compareTo(BigDecimal.ZERO) <= 0) {
+-            throw new Error("Base must be positive");
+-        }
+-        if (h.compareTo(BigDecimal.ZERO) <= 0) {
+-            throw new Error("Height must be positive");
+-        }
+-        return base.multiply(h).multiply(BigDecimal.valueOf(0.5)).doubleValue();
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/examples/PrePostIncrement.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/examples/PrePostIncrement.java b/homework-exercises/src/io/codelex/arithmetic/examples/PrePostIncrement.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/examples/PrePostIncrement.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,14 +0,0 @@
+-package io.codelex.arithmetic.examples;
+-
+-public class PrePostIncrement {
+-    public static void main(String[] args) {
+-        int a = 21;
+-        int b = 35;
+-        int sum = a++ + ++b;
+-        System.out.println("sum = " + sum);
+-        // 1. 56
+-        // 2. 57
+-        // 3. 58
+-        // 4. compilation error
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/Exercise9.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/Exercise9.java b/homework-exercises/src/io/codelex/arithmetic/Exercise9.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/Exercise9.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,36 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-import java.util.Scanner;
+-
+-public class Exercise9 {
+-    public static String analyzeBmi(double bmi) {
+-        if (bmi < 18.5) {
+-            return "Underweight";
+-        } else if (bmi < 25) {
+-            return "Optimal weight";
+-        } else{
+-            return "Overweight";
+-        }
+-    }
+-
+-    public static void main(String[] args){
+-        Scanner sc = new Scanner(System.in);
+-        System.out.println("Will you be using metric system or imperial system?");
+-        String system = sc.nextLine();
+-        System.out.println("Enter your weight in " + system + ":");
+-        double weight = sc.nextDouble();
+-        System.out.println("Enter your height in " + system + ":");
+-        double height = sc.nextDouble();
+-        double bmi;
+-
+-        if (system.equals("metric")) {
+-             bmi = (weight/0.45359237)*703/Math.pow(height/2.54, 2);
+-            System.out.println(analyzeBmi(bmi));
+-        } else if (system.equals("imperial")) {
+-             bmi = (weight*703) / Math.pow(height, 2);
+-            System.out.println(analyzeBmi(bmi));
+-        } else {
+-            System.out.println("You have entered an invalid system.");
+-        }
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise4.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise4.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise4.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise4.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,9 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-public class Exercise4 {
+-    public static void main(String[] args) {
+-        int year = 2002;
+-        String name = "Karlis";
+-        System.out.println("My name is " + name + " and I was born in " + year + ".");
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/Exercise1.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/Exercise1.java b/homework-exercises/src/io/codelex/arithmetic/Exercise1.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/Exercise1.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,10 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-public class Exercise1 {
+-    public static boolean isFifteen(int a, int b) {
+-        return a == 15 || b == 15 || a + b == 15 || Math.abs(a - b) == 15;
+-    }
+-    public static void main(String[] args) {
+-        System.out.println(isFifteen(15, 0));
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/Exercise8.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/Exercise8.java b/homework-exercises/src/io/codelex/arithmetic/Exercise8.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/Exercise8.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,24 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-public class Exercise8 {
+-    public static String CalculateWage(double hours, double rate) {
+-        double pay = 0;
+-        if (hours > 60) {
+-            return "You can't work more than 60 hours a week";
+-        } else if (rate < 8.0) {
+-            return "You can't work for less than minimum wage";
+-        } else if (hours > 40) {
+-            pay = 40 * rate + (hours - 40) * rate * 1.5;
+-        } else {
+-            pay = hours * rate;
+-        }
+-        return "Wage: " + pay;
+-    }
+-
+-    public static void main(String[] args) {
+-        System.out.println("Employee 1 "+CalculateWage(35, 7.50));
+-        System.out.println("Employee 2 "+CalculateWage(47, 8.20));
+-        System.out.println("Employee 3 "+CalculateWage(73, 10.00));
+-
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/practice/SadFor.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/practice/SadFor.java b/homework-exercises/src/io/codelex/typesandvariables/practice/SadFor.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/practice/SadFor.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,19 +0,0 @@
+-package io.codelex.typesandvariables.practice;
+-
+-import io.codelex.NoCodeWrittenException;
+-
+-public class SadFor {
+-    public static void main(String[] args) {
+-        System.out.println(test1());
+-    }
+-
+-    public static int test1() {
+-        for (int i = 0; i < 10; i++) {
+-            if (Math.sqrt(i) > 2.5) {
+-                return i;
+-            }
+-        }
+-        throw new NoCodeWrittenException();
+-    }
+-
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/examples/VariableScope.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/examples/VariableScope.java b/homework-exercises/src/io/codelex/typesandvariables/examples/VariableScope.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/examples/VariableScope.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,19 +0,0 @@
+-package io.codelex.typesandvariables.examples;
+-
+-public class VariableScope {
+-    public static int x = 10; // class level
+-
+-    public static void main(String[] args) {
+-        System.out.println(x); // output 10
+-        int x = 100; // method level, local variable
+-        x++;
+-        System.out.println(x); // output 101
+-        addOne();
+-        System.out.println(x); // output ?
+-    }
+-
+-    private static void addOne() {
+-        x = x + 1;
+-        System.out.println(x); // output ?
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/Product1ToN.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/Product1ToN.java b/homework-exercises/src/io/codelex/arithmetic/Product1ToN.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/Product1ToN.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,12 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-public class Product1ToN {
+-    public  static  void main(String[] args){
+-        int n = 10;
+-        int product = 1;
+-        for (int i = 1; i <= n; i++) {
+-            product *= i;
+-        }
+-        System.out.println(product);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise9.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise9.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise9.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise9.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,22 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-import java.util.Scanner;
+-
+-public class Exercise9 {
+-    public static void main(String[] args) {
+-        Scanner sc = new Scanner(System.in);
+-        System.out.println("Input distance in meters: ");
+-        double meters = sc.nextDouble();
+-        System.out.println("Input hour: ");
+-        double hour = sc.nextDouble();
+-        System.out.println("Input minutes: ");
+-        double minutes = sc.nextDouble();
+-        System.out.println("Input seconds: ");
+-        double seconds = sc.nextDouble();
+-        double time = hour * 3600 + minutes * 60 + seconds;
+-        double speed = meters / time;
+-        System.out.println("Your speed in meters/second is " + speed);
+-        System.out.println("Your speed in km/h is " + speed * 3.6);
+-        System.out.println("Your speed in miles/h is " + speed * 2.236936);
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise5.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise5.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise5.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise5.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,26 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-import java.util.LinkedHashMap;
+-import java.util.Map;
+-
+-public class Exercise5 {
+-    public static void main(String[] args) {
+-        Map<String, String> map = new LinkedHashMap<String, String>();
+-        map.put("English III", "Ms. Lapan");
+-        map.put("Precalculus", "Mrs. Gideon");
+-        map.put("Music Theory", "Mr. Davis");
+-        map.put("Biotechnology", "Ms. Palmer");
+-        map.put("Principles of Technology I", "Ms. Garcia");
+-        map.put("Latin II", "Mrs. Barnett");
+-        map.put("AP US History", "Ms. Johannessen");
+-        map.put("Business Computer Infomation Systems", "Mr. James");
+-
+-        int counter = 1;
+-        System.out.println("+------------------------------------------------------------+");
+-        for (String key : map.keySet()) {
+-            System.out.println("| " + counter + " | " + key + " | " + map.get(key));
+-            counter++;
+-        }
+-        System.out.println("+------------------------------------------------------------+");
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/CozaLozaWoza.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/CozaLozaWoza.java b/homework-exercises/src/io/codelex/arithmetic/CozaLozaWoza.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/CozaLozaWoza.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,25 +0,0 @@
+-package io.codelex.arithmetic;
+-
+-public class CozaLozaWoza {
+-    public static void main(String[] args){
+-        for (int i = 1; i <= 110; i++) {
+-            if (i % 3 == 0) {
+-                System.out.print("Coza");
+-            }
+-            if (i % 5 == 0) {
+-                System.out.print("Loza");
+-            }
+-            if (i % 7 == 0) {
+-                System.out.print("Woza");
+-            }
+-            if (i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
+-                System.out.print(i);
+-            }
+-            if (i % 11 == 0) {
+-                System.out.println();
+-            } else {
+-                System.out.print(" ");
+-            }
+-        }
+-    }
+-}
+Index: homework-exercises/src/io/codelex/typesandvariables/Exercise8.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/typesandvariables/Exercise8.java b/homework-exercises/src/io/codelex/typesandvariables/Exercise8.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/typesandvariables/Exercise8.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,17 +0,0 @@
+-package io.codelex.typesandvariables;
+-
+-import java.text.DecimalFormat;
+-import java.util.Scanner;
+-
+-public class Exercise8 {
+-    public static void main(String[] args) {
+-        DecimalFormat formatting = new DecimalFormat("#.##");
+-
+-        Scanner sc = new Scanner(System.in);
+-        System.out.print("Enter minutes: ");
+-        double minutes = sc.nextDouble();
+-        double days = minutes/1440;
+-        double years = days / 365;
+-        System.out.println(formatting.format( minutes) + " minutes is " + formatting.format(years) + " years and " + formatting.format(days) + " days");
+-    }
+-}
+Index: homework-exercises/src/io/codelex/arithmetic/practice/CalculateArea.java
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/arithmetic/practice/CalculateArea.java b/homework-exercises/src/io/codelex/arithmetic/practice/CalculateArea.java
+deleted file mode 100644
+--- a/homework-exercises/src/io/codelex/arithmetic/practice/CalculateArea.java	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
++++ /dev/null	(revision ff674d53b117e9f2485b9bcd4df4b18ca4ca573b)
+@@ -1,114 +0,0 @@
+-package io.codelex.arithmetic.practice;
+-
+-import java.math.BigDecimal;
+-import java.util.Scanner;
+-
+-import static java.math.BigDecimal.ZERO;
+-
+-public class CalculateArea {
+-    public static void main(String[] args) {
+-        int choice; // The user's menu choice
+-
+-        do {
+-            // Get the user's menu choice.
+-            choice = getMenu();
+-
+-            if (choice == 1) {
+-                calculateCircleArea();
+-            } else if (choice == 2) {
+-                calculateRectangleArea();
+-            } else if (choice == 3) {
+-                calculateTriangleArea();
+-            } else if (choice == 4) {
+-                System.out.println("Thanks for calculating!");
+-            }
+-
+-        } while (choice != 4);
+-    }
+-
+-    public static int getMenu() {
+-
+-        int userChoice;
+-
+-        // keyboard input
+-        Scanner keyboard = new Scanner(System.in);
+-
+-        // Display the menu.
+-        System.out.println("Geometry Calculator\n");
+-        System.out.println("1. Calculate the Area of a Circle");
+-        System.out.println("2. Calculate the Area of a Rectangle");
+-        System.out.println("3. Calculate the Area of a Triangle");
+-        System.out.println("4. Quit\n");
+-        System.out.print("Enter your choice (1-4) : ");
+-
+-        // get input from user
+-        userChoice = keyboard.nextInt();
+-
+-        // validate input
+-        while (userChoice < 1 || userChoice > 4) {
+-            System.out.print("Please enter a valid range: 1, 2, 3, or 4: ");
+-            userChoice = keyboard.nextInt();
+-        }
+-
+-        return userChoice;
+-    }
+-
+-    public static void calculateCircleArea() {
+-
+-        BigDecimal radius;
+-
+-        // Get input from user
+-        Scanner keyboard = new Scanner(System.in);
+-        System.out.print("What is the circle's radius? ");
+-        //todo
+-        radius = BigDecimal.valueOf(keyboard.nextDouble());
+-
+-        // Display output
+-        System.out.println("The circle's area is "
+-                + Geometry.areaOfCircle(radius));
+-    }
+-
+-    public static void calculateRectangleArea() {
+-        BigDecimal length;
+-        BigDecimal width;
+-
+-        // Get input from user
+-        Scanner keyboard = new Scanner(System.in);
+-
+-        // Get length
+-        System.out.print("Enter length? ");
+-        //todo
+-        length = BigDecimal.valueOf(keyboard.nextDouble());
+-
+-        // Get width
+-        System.out.print("Enter width? ");
+-        //todo
+-        width = BigDecimal.valueOf(keyboard.nextDouble());
+-
+-        // Display output
+-        System.out.println("The rectangle's area is "
+-                + Geometry.areaOfRectangle(length, width));
+-    }
+-
+-    public static void calculateTriangleArea() {
+-        BigDecimal base;
+-        BigDecimal height;
+-
+-        // Get input from user
+-        Scanner keyboard = new Scanner(System.in);
+-
+-        // Get the base
+-        System.out.print("Enter length of the triangle's base? ");
+-        //todo
+-        base = BigDecimal.valueOf(keyboard.nextDouble());
+-
+-        // Get the height
+-        System.out.print("Enter triangle's height? ");
+-        //todo
+-        height = BigDecimal.valueOf(keyboard.nextDouble());
+-
+-        // Display the triangle's area.
+-        System.out.println("The triangle's area is "
+-                + Geometry.areaOfTriangle(base, height));
+-    }
+-}
+Index: homework-exercises/src/io/codelex/oop/imperialToMetric/Exercise5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/imperialToMetric/Exercise5.java b/homework-exercises/src/io/codelex/oop/imperialToMetric/Exercise5.java
+new file mode 100644
+--- /dev/null	(date 1664547352881)
++++ b/homework-exercises/src/io/codelex/oop/imperialToMetric/Exercise5.java	(date 1664547352881)
+@@ -0,0 +1,11 @@
++package io.codelex.oop.imperialToMetric;
++
++public class Exercise5 {
++    public static void main(String[] args) {
++        MeasurementConverter converter = new MeasurementConverter();
++        System.out.println(converter.convert(1, ConversionType.METERS_TO_YARDS));
++        System.out.println(converter.convert(1, ConversionType.YARDS_TO_METERS));
++        System.out.println(converter.convert(1, ConversionType.CENTIMETERS_TO_INCHES));
++        System.out.println(converter.convert(1, ConversionType.KILOMETERS_TO_MILES));
++    }
++}
+Index: homework-exercises/src/io/codelex/practice/README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/README.md b/homework-exercises/src/io/codelex/practice/README.md
+new file mode 100644
+--- /dev/null	(date 1662399971538)
++++ b/homework-exercises/src/io/codelex/practice/README.md	(date 1662399971538)
+@@ -0,0 +1,38 @@
++# Practice
++
++## Exercise #1
++Create application in which you can enter two dates (LocalDate) and it will calculate how many hours regular office 
++employee works in that period of time. Assumptions are that employee works only in working days, national holidays are 
++ignored and he works 8h per working day.
++
++## Exercise #2
++Server update must be performed every two weeks (14 days). 
++Given a date when server is launched create a method that calculates at which dates server must be updated in given month.
++For example if server is launched on 02.02.2022 it must be updated on 16th of February, then on 2nd of March.
++
++So if user inputs server launch date (for ex. 01.06.2022), year (for ex. 2022) and month (for ex. September), then 
++application should return at which dates server must be updated in September 2022.
++
++## Exercise #3
++
++Create a class DatePeriod. It should contain two LocalDate fields - start and end.
++In the class create a method named - intersection. The intersection method should receive DatePeriod as a parameter and return DatePeriod - the intersection of both periods. If periods do not intersect with each other, intersection method should return null.
++
++See example how it should work:
++
++```
++LocalDate firstStart = LocalDate.of(2022, 1, 1);
++LocalDate firstEnd = LocalDate.of(2022, 1, 15);
++DatePeriod firstPeriod = new DatePeriod(firstStart, firstEnd);
++
++LocalDate secondStart = LocalDate.of(2022, 1, 10);
++LocalDate secondEnd = LocalDate.of(2022, 1, 25);
++DatePeriod secondPeriod = new DatePeriod(secondStart, secondEnd);
++
++DatePeriod overlap = firstPeriod.intersection(secondPeriod);
++
++//overlap variable should have start date 10.01.2022 and end date 15.01.2022
++```
++
++Hint: think of all the possible scenarios how two periods can overlap each other before writing code. Write smaller private methods inside DatePeriod class that would help to calculate intersection, like for example method that would check if periods even overlap, if one period completely includes the other etc.
++
+Index: homework-exercises/src/io/codelex/oop/parcels/Validatable.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/parcels/Validatable.java b/homework-exercises/src/io/codelex/oop/parcels/Validatable.java
+new file mode 100644
+--- /dev/null	(date 1664547717816)
++++ b/homework-exercises/src/io/codelex/oop/parcels/Validatable.java	(date 1664547717816)
+@@ -0,0 +1,6 @@
++package io.codelex.oop.parcels;
++
++public interface Validatable {
++    boolean validate();
++
++}
+Index: homework-exercises/src/io/codelex/oop/parcels/Parcel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/parcels/Parcel.java b/homework-exercises/src/io/codelex/oop/parcels/Parcel.java
+new file mode 100644
+--- /dev/null	(date 1664547832255)
++++ b/homework-exercises/src/io/codelex/oop/parcels/Parcel.java	(date 1664547832255)
+@@ -0,0 +1,38 @@
++package io.codelex.oop.parcels;
++
++public class Parcel implements Validatable {
++    int xLength;
++    int yLength;
++    int zLength;
++    float weight;
++    boolean isExpress;
++
++    public Parcel(int xLength, int yLength, int zLength, float weight, boolean isExpress) {
++        this.xLength = xLength;
++        this.yLength = yLength;
++        this.zLength = zLength;
++        this.weight = weight;
++    }
++
++    @Override
++    public boolean validate() {
++        if (xLength + yLength + zLength > 300) {
++            System.out.println("The sum of the dimensions (x, y, z) exceeds 300");
++            return false;
++        }
++        if (xLength < 30 || yLength < 30 || zLength < 30) {
++            System.out.println("Each size is less than 30");
++            return false;
++        }
++        if (weight > 15.0 && isExpress) {
++            System.out.println("The weight exceeds 15.0 for isExpress = true");
++            return false;
++        }
++        if (weight > 30.0 && !isExpress) {
++            System.out.println("The weight exceeds 30.0 for isExpress = false");
++            return false;
++        }
++
++        return true;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/runners/Runner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/runners/Runner.java b/homework-exercises/src/io/codelex/oop/runners/Runner.java
+new file mode 100644
+--- /dev/null	(date 1664544418600)
++++ b/homework-exercises/src/io/codelex/oop/runners/Runner.java	(date 1664544418600)
+@@ -0,0 +1,24 @@
++package io.codelex.oop.runners;
++
++public enum Runner {
++    BEGINNER(200, 300),
++    INTERMEDIATE(150, 200),
++    ADVANCED(50, 150);
++
++    private final int minTime;
++    private final int maxTime;
++
++    Runner(int minTime, int maxTime) {
++        this.minTime = minTime;
++        this.maxTime = maxTime;
++    }
++
++    public static Runner getFitnessLevel(int time) {
++        for (Runner runner : Runner.values()) {
++            if (time >= runner.minTime && time <= runner.maxTime) {
++                return runner;
++            }
++        }
++        return null;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/imperialToMetric/ConversionType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/imperialToMetric/ConversionType.java b/homework-exercises/src/io/codelex/oop/imperialToMetric/ConversionType.java
+new file mode 100644
+--- /dev/null	(date 1664547352859)
++++ b/homework-exercises/src/io/codelex/oop/imperialToMetric/ConversionType.java	(date 1664547352859)
+@@ -0,0 +1,28 @@
++package io.codelex.oop.imperialToMetric;
++//Create a ConversionType enum class with the constants METERS_TO_YARDS, YARDS_TO_METERS, CENTIMETERS_TO_ICHES, INCHES_TO_CENTIMETERS, KILOMETERS_TO_MILES, MILES_TO_KILOMETERS. Enum should have a Converter type parameter used to perform calculations for a given type.
++
++public enum ConversionType {
++    METERS_TO_YARDS(Converter.METERS_TO_YARDS),
++    YARDS_TO_METERS(Converter.YARDS_TO_METERS),
++    CENTIMETERS_TO_INCHES(Converter.CENTIMETERS_TO_INCHES),
++    INCHES_TO_CENTIMETERS(Converter.INCHES_TO_CENTIMETERS),
++    KILOMETERS_TO_MILES(Converter.KILOMETERS_TO_MILES),
++    MILES_TO_KILOMETERS(Converter.MILES_TO_KILOMETERS);
++    private final Converter converter;
++    ConversionType(Converter converter) {
++        this.converter = converter;
++    }
++    public double convert(double value) {
++        return converter.convert(value);
++    }
++    private interface Converter {
++        double convert(double value);
++        Converter METERS_TO_YARDS = value -> value * 1.09361;
++        Converter YARDS_TO_METERS = value -> value * 0.9144;
++        Converter CENTIMETERS_TO_INCHES = value -> value * 0.393701;
++        Converter INCHES_TO_CENTIMETERS = value -> value * 2.54;
++        Converter KILOMETERS_TO_MILES = value -> value * 0.621371;
++        Converter MILES_TO_KILOMETERS = value -> value * 1.60934;
++    }
++}
++
+Index: homework-exercises/src/io/codelex/practice/Exercise1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/Exercise1.java b/homework-exercises/src/io/codelex/practice/Exercise1.java
+new file mode 100644
+--- /dev/null	(date 1664373401284)
++++ b/homework-exercises/src/io/codelex/practice/Exercise1.java	(date 1664373401284)
+@@ -0,0 +1,25 @@
++package io.codelex.practice;
++
++import java.time.LocalDate;
++import java.time.temporal.ChronoUnit;
++import java.util.Scanner;
++public class Exercise1 {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("Enter first date: ");
++        LocalDate firstDate = LocalDate.parse(scanner.next());
++        System.out.println("Enter second date: ");
++        LocalDate secondDate = LocalDate.parse(scanner.next());
++        System.out.println(firstDate+" "+secondDate);
++        long days = firstDate.until(secondDate, ChronoUnit.DAYS);
++        System.out.println("Days: "+days);
++        long hours = days * 8;
++        for (int i = 0; i < days; i++) {
++            if (firstDate.plusDays(i).getDayOfWeek().getValue() > 5) {
++                hours -= 8;
++                System.out.println("Weekend: "+firstDate.plusDays(i));
++            }
++        }
++        System.out.println("Hours: " + hours);
++    }
++}
+Index: homework-exercises/src/io/codelex/practice/DateTimeExercise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/DateTimeExercise.java b/homework-exercises/src/io/codelex/practice/DateTimeExercise.java
+new file mode 100644
+--- /dev/null	(date 1664372021519)
++++ b/homework-exercises/src/io/codelex/practice/DateTimeExercise.java	(date 1664372021519)
+@@ -0,0 +1,22 @@
++package io.codelex.practice;
++
++import java.time.LocalDate;
++
++public class DateTimeExercise {
++    public static final long DAYS_BETWEEN = 5;
++
++    public static LocalDate createNewYearsEve2017() {
++        return LocalDate.of(2017, 12, 31);
++    }
++
++    public static LocalDate[] getTwoLocalDates() {
++        LocalDate[] dates = new LocalDate[2];
++        dates[0] = LocalDate.now();
++        dates[1] = dates[0].plusDays(DAYS_BETWEEN);
++        return dates;
++    }
++
++    public static LocalDate findNextFriday13th(LocalDate from) {
++        throw new UnsupportedOperationException();
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/imperialToMetric/MeasurementConverter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/imperialToMetric/MeasurementConverter.java b/homework-exercises/src/io/codelex/oop/imperialToMetric/MeasurementConverter.java
+new file mode 100644
+--- /dev/null	(date 1664547717852)
++++ b/homework-exercises/src/io/codelex/oop/imperialToMetric/MeasurementConverter.java	(date 1664547717852)
+@@ -0,0 +1,8 @@
++package io.codelex.oop.imperialToMetric;
++
++public class MeasurementConverter {
++    public double convert(double value, ConversionType conversionType) {
++        return conversionType.convert(value);
++    }
++
++}
+Index: homework-exercises/src/io/codelex/oop/cars/Exercise3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/cars/Exercise3.java b/homework-exercises/src/io/codelex/oop/cars/Exercise3.java
+new file mode 100644
+--- /dev/null	(date 1664544418579)
++++ b/homework-exercises/src/io/codelex/oop/cars/Exercise3.java	(date 1664544418579)
+@@ -0,0 +1,65 @@
++package io.codelex.oop.cars;
++
++public class Exercise3 {
++    public static void main(String[] args) {
++        //Test all methods from CarService- adding, removing, searching etc. (or add testing to previously created class in the first part)
++
++        //Create a new CarService
++        CarService carService = new CarService();
++        Manufacturer manufacturer = new Manufacturer("BMW", 1916, "Germany");
++        Manufacturer manufacturer2 = new Manufacturer("Audi", 1910, "Germany");
++        Manufacturer manufacturer3 = new Manufacturer("Volkswagen", 1937, "Germany");
++        Manufacturer manufacturer4 = new Manufacturer("Mercedes-Benz", 1926, "Germany");
++        //Add 3 cars to the service
++        carService.addCar(new Car("BMW", "M5", 100000,2019 , manufacturer, EngineType.V12));
++        carService.addCar(new Car("Audi", "A8", 90000,2018 , manufacturer2, EngineType.V8));
++        carService.addCar(new Car("Volkswagen", "Golf", 50000,2017 , manufacturer3, EngineType.V6));
++        carService.addCar(new Car("Mercedes-Benz", "S-Class", 80000,2016 , manufacturer4, EngineType.S6));
++        carService.addCar(new Car("BMW", "M3", 70000,2015 , manufacturer, EngineType.S4));
++        carService.addCar(new Car("Audi", "A6", 60000,2014 , manufacturer2, EngineType.S3));
++        carService.addCar(new Car("Volkswagen", "Passat", 50000,2013 , manufacturer3, EngineType.V12));
++        carService.addCar(new Car("Mercedes-Benz", "E-Class", 40000,2012 , manufacturer4, EngineType.V8));
++        carService.addCar(new Car("BMW", "M2", 30000,2011 , manufacturer, EngineType.V6));
++        carService.addCar(new Car("Audi", "A4", 20000,2010 , manufacturer2, EngineType.S6));
++        carService.addCar(new Car("Volkswagen", "Polo", 10000,2009 , manufacturer3, EngineType.S4));
++        carService.addCar(new Car("Mercedes-Benz", "C-Class", 5000,2008 , manufacturer4, EngineType.S3));
++        carService.addCar(new Car("BMW", "M1", 4000,2007 , manufacturer, EngineType.V12));
++        carService.addCar(new Car("Audi", "A3", 3000,2006 , manufacturer2, EngineType.V8));
++        carService.addCar(new Car("Volkswagen", "Golf", 2000,2005 , manufacturer3, EngineType.V6));
++        carService.addCar(new Car("Mercedes-Benz", "B-Class", 1000,2004 , manufacturer4, EngineType.S6));
++        carService.addCar(new Car("BMW", "M4", 500,2003 , manufacturer, EngineType.S4));
++        carService.addCar(new Car("Audi", "A2", 400,2002 , manufacturer2, EngineType.S3));
++        carService.addCar(new Car("Volkswagen", "Golf", 300,2001 , manufacturer3, EngineType.V12));
++        carService.addCar(new Car("Mercedes-Benz", "A-Class", 200,2000 , manufacturer4, EngineType.V8));
++        carService.addCar(new Car("BMW", "M6", 100,1999 , manufacturer, EngineType.V6));
++        carService.addCar(new Car("Audi", "A1", 50,1998 , manufacturer2, EngineType.S6));
++        carService.addCar(new Car("Volkswagen", "Golf", 25,1997 , manufacturer3, EngineType.S4));
++        carService.addCar(new Car("Mercedes-Benz", "GLA-Class", 10,1996 , manufacturer4, EngineType.S3));
++        carService.addCar(new Car("BMW", "M5", 5,1995 , manufacturer, EngineType.V12));
++        carService.addCar(new Car("Audi", "A8", 4,1994 , manufacturer2, EngineType.V8));
++        carService.addCar(new Car("Volkswagen", "Golf", 3,1993 , manufacturer3, EngineType.V6));
++        carService.addCar(new Car("Mercedes-Benz", "S-Class", 2,1992 , manufacturer4, EngineType.S6));
++
++
++
++        //Print all cars
++        System.out.println("All cars:"+carService.getCars());
++        System.out.println("All cars with V12 engine:"+carService.getCarsWithV12Engine());
++
++        System.out.println("All cars produced before 1999:"+carService.getCarsProducedBefore1999());
++
++
++        System.out.println("The most expensive car:"+carService.getMostExpensiveCar());
++
++
++        System.out.println("The cheapest car:"+carService.getCheapestCar());
++
++        System.out.println("All cars sorted by price ascending:"+carService.getCarsSortedByPrice(true));
++        System.out.println("All cars sorted by price descending:"+carService.getCarsSortedByPrice(false));
++        System.out.println("Is BMW M5 on the list:"+carService.isCarOnTheList(new Car("BMW", "M5", 2019, 100000, manufacturer, EngineType.V12)));
++        System.out.println("All cars manufactured by BMW:"+carService.getCarsByManufacturer(manufacturer));
++        System.out.println("All cars manufactured by manufacturers with year of establishment < 1920:"+carService.getCarsByManufacturerYearOfEstablishment(manufacturer));
++
++
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/cars/CarService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/cars/CarService.java b/homework-exercises/src/io/codelex/oop/cars/CarService.java
+new file mode 100644
+--- /dev/null	(date 1664544418559)
++++ b/homework-exercises/src/io/codelex/oop/cars/CarService.java	(date 1664544418559)
+@@ -0,0 +1,112 @@
++package io.codelex.oop.cars;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class CarService {
++    //1. adding cars to the list,
++    //2. removing a car from the list,
++    //3. returning a list of all cars,
++    //4. returning cars with a V12 engine,
++    //5. returning cars produced before 1999,
++    //6. returning the most expensive car,
++    //7. returning the cheapest car,
++    //8. returning the car with at least 3 manufacturers,
++    //9. returning a list of all cars sorted according to the passed parameter: ascending / descending,
++    //10. checking if a specific car is on the list,
++    //11. returning a list of cars manufactured by a specific manufacturer,
++    //12. returning the list of cars manufactured by the manufacturer with the year of establishment <,>, <=,> =,
++    //    =,! = from the given.
++
++    private List<Car> cars = new ArrayList<>();
++
++    public CarService() {
++    }
++
++    public void addCar(Car car) {
++        cars.add(car);
++    }
++
++    public void removeCar(Car car) {
++        cars.remove(car);
++    }
++
++    public List<Car> getCars() {
++        return cars;
++    }
++
++    public List<Car> getCarsWithV12Engine() {
++        List<Car> carsWithV12Engine = new ArrayList<>();
++        for (Car car : cars) {
++            if (car.getEngineType() == EngineType.V12) {
++                carsWithV12Engine.add(car);
++            }
++        }
++        return carsWithV12Engine;
++    }
++
++    public List<Car> getCarsProducedBefore1999() {
++        List<Car> carsProducedBefore1999 = new ArrayList<>();
++        for (Car car : cars) {
++            if (car.getYearOfManufacture() < 1999) {
++                carsProducedBefore1999.add(car);
++            }
++        }
++        return carsProducedBefore1999;
++    }
++
++    public Car getMostExpensiveCar() {
++        Car mostExpensiveCar = cars.get(0);
++        for (Car car : cars) {
++            if (car.getPrice() > mostExpensiveCar.getPrice()) {
++                mostExpensiveCar = car;
++            }
++        }
++        return mostExpensiveCar;
++    }
++
++    public Car getCheapestCar() {
++        Car cheapestCar = cars.get(0);
++        for (Car car : cars) {
++            if (car.getPrice() < cheapestCar.getPrice()) {
++                cheapestCar = car;
++            }
++        }
++        return cheapestCar;
++    }
++
++    public List<Car> getCarsSortedByPrice(boolean ascending) {
++        List<Car> carsSortedByPrice = new ArrayList<>(cars);
++        if (ascending) {
++            carsSortedByPrice.sort((o1, o2) -> o1.getPrice() - o2.getPrice());
++        } else {
++            carsSortedByPrice.sort((o1, o2) -> o2.getPrice() - o1.getPrice());
++        }
++        return carsSortedByPrice;
++    }
++
++    public boolean isCarOnTheList(Car car) {
++        return cars.contains(car);
++    }
++
++    public List<Car> getCarsByManufacturer(Manufacturer manufacturer) {
++        List<Car> carsByManufacturer = new ArrayList<>();
++        for (Car car : cars) {
++            if (car.getManufacturer().equals(manufacturer)) {
++                carsByManufacturer.add(car);
++            }
++        }
++        return carsByManufacturer;
++    }
++
++    public List<Car> getCarsByManufacturerYearOfEstablishment(Manufacturer manufacturer) {
++List<Car> carsByManufacturerYearOfEstablishment = new ArrayList<>();
++        for (Car car : cars) {
++            if (car.getManufacturer().getYearOfEstablishment() == manufacturer.getYearOfEstablishment()) {
++                carsByManufacturerYearOfEstablishment.add(car);
++            }
++        }
++        return carsByManufacturerYearOfEstablishment;
++    }
++
++}
+Index: homework-exercises/src/io/codelex/oop/cars/Manufacturer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/cars/Manufacturer.java b/homework-exercises/src/io/codelex/oop/cars/Manufacturer.java
+new file mode 100644
+--- /dev/null	(date 1664544418588)
++++ b/homework-exercises/src/io/codelex/oop/cars/Manufacturer.java	(date 1664544418588)
+@@ -0,0 +1,52 @@
++package io.codelex.oop.cars;
++
++import java.util.Collection;
++import java.util.Objects;
++
++public class Manufacturer {
++    //Create a Manufacturer class that will contain fields: name, year of establishment, country. Include all necessary methods and constructor parameters. Implement the hashCode() and equals() methods.
++
++    private String name;
++    private int yearOfEstablishment;
++    private String country;
++
++    public Manufacturer(String name, int yearOfEstablishment, String country) {
++        this.name = name;
++        this.yearOfEstablishment = yearOfEstablishment;
++        this.country = country;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public int getYearOfEstablishment() {
++        return yearOfEstablishment;
++    }
++
++    public String getCountry() {
++        return country;
++    }
++
++    @Override
++    public String toString() {
++        return "Manufacturer{" +
++                "name='" + name + '\'' +
++                ", yearOfEstablishment=" + yearOfEstablishment +
++                ", country='" + country + '\'' +
++                '}';
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof Manufacturer that)) return false;
++        return getYearOfEstablishment() == that.getYearOfEstablishment() && getName().equals(that.getName()) && getCountry().equals(that.getCountry());
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(name, yearOfEstablishment, country);
++    }
++
++}
+Index: homework-exercises/src/io/codelex/oop/cars/Car.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/cars/Car.java b/homework-exercises/src/io/codelex/oop/cars/Car.java
+new file mode 100644
+--- /dev/null	(date 1664542011391)
++++ b/homework-exercises/src/io/codelex/oop/cars/Car.java	(date 1664542011391)
+@@ -0,0 +1,71 @@
++package io.codelex.oop.cars;
++
++import java.util.Objects;
++
++public class Car {
++    //2) Create a Car class that will contain fields: name, model, price, year of manufacture, manufacturer list (Manufacturer), and engine type (represented as the enum class, e.g. V12, V8, V6, S6, S4, S3). Include all necessary methods and constructor parameters. Implement the hashcode() and equals() methods.
++    private String name;
++    private String model;
++    private int price;
++    private int yearOfManufacture;
++    private Manufacturer manufacturer;
++    private EngineType engineType;
++
++    public Car(String name, String model, int price, int yearOfManufacture, Manufacturer manufacturer, EngineType engineType) {
++        this.name = name;
++        this.model = model;
++        this.price = price;
++        this.yearOfManufacture = yearOfManufacture;
++        this.manufacturer = manufacturer;
++        this.engineType = engineType;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public String getModel() {
++        return model;
++    }
++
++    public int getPrice() {
++        return price;
++    }
++
++    public int getYearOfManufacture() {
++        return yearOfManufacture;
++    }
++
++    public Manufacturer getManufacturer() {
++        return manufacturer;
++    }
++
++    public EngineType getEngineType() {
++        return engineType;
++    }
++
++    @Override
++    public String toString() {
++        return "Car{" +
++                "name='" + name + '\'' +
++                ", model='" + model + '\'' +
++                ", price=" + price +
++                ", yearOfManufacture=" + yearOfManufacture +
++                ", manufacturer=" + manufacturer +
++                ", engineType=" + engineType +
++                '}';
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof Car car)) return false;
++        return getPrice() == car.getPrice() && getYearOfManufacture() == car.getYearOfManufacture() && getName().equals(car.getName()) && getModel().equals(car.getModel()) && getManufacturer().equals(car.getManufacturer()) && getEngineType() == car.getEngineType();
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(name, model, price, yearOfManufacture, manufacturer, engineType);
++    }
++
++}
+Index: homework-exercises/src/io/codelex/oop/cars/EngineType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/cars/EngineType.java b/homework-exercises/src/io/codelex/oop/cars/EngineType.java
+new file mode 100644
+--- /dev/null	(date 1664542211958)
++++ b/homework-exercises/src/io/codelex/oop/cars/EngineType.java	(date 1664542211958)
+@@ -0,0 +1,10 @@
++package io.codelex.oop.cars;
++
++public enum EngineType {
++    V12,
++    V8,
++    V6,
++    S6,
++    S4,
++    S3
++}
+Index: homework-exercises/src/io/codelex/oop/persons/Person.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/persons/Person.java b/homework-exercises/src/io/codelex/oop/persons/Person.java
+new file mode 100644
+--- /dev/null	(date 1664541386382)
++++ b/homework-exercises/src/io/codelex/oop/persons/Person.java	(date 1664541386382)
+@@ -0,0 +1,33 @@
++package io.codelex.oop.persons;
++
++public abstract class Person {
++    private String firstName;
++    private String lastName;
++    private String id;
++    private int age;
++
++    Person(String firstName, String lastName, String id, int age) {
++        this.firstName = firstName;
++        this.lastName = lastName;
++        this.id = id;
++        this.age = age;
++    }
++
++    public String getFirstName() {
++        return firstName;
++    }
++
++    public String getLastName() {
++        return lastName;
++    }
++
++    public String getId() {
++        return id;
++    }
++
++    public int getAge() {
++        return age;
++    }
++
++    abstract String getInfo();
++}
+Index: homework-exercises/src/io/codelex/oop/persons/Employee.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/persons/Employee.java b/homework-exercises/src/io/codelex/oop/persons/Employee.java
+new file mode 100644
+--- /dev/null	(date 1664541426031)
++++ b/homework-exercises/src/io/codelex/oop/persons/Employee.java	(date 1664541426031)
+@@ -0,0 +1,23 @@
++package io.codelex.oop.persons;
++
++import java.time.LocalDate;
++
++public class Employee extends Person{
++    private String position;
++    private LocalDate startedWorking;
++
++    Employee(String firstName, String lastName, String id, int age, String position, LocalDate startedWorking) {
++        super(firstName, lastName, id, age);
++        this.position = position;
++        this.startedWorking = startedWorking;
++    }
++
++    public String getWorkExperience(){
++        return startedWorking.until(LocalDate.now()).getYears() + " years";
++    }
++
++    @Override
++    public String getInfo(){
++        return this.position+ getFirstName() + getLastName() + " (" + getWorkExperience() + ")";
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/persons/Customer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/persons/Customer.java b/homework-exercises/src/io/codelex/oop/persons/Customer.java
+new file mode 100644
+--- /dev/null	(date 1664541549314)
++++ b/homework-exercises/src/io/codelex/oop/persons/Customer.java	(date 1664541549314)
+@@ -0,0 +1,23 @@
++package io.codelex.oop.persons;
++
++public class Customer extends Person{
++    private String customerId;
++    private int purchaseCount;
++
++    Customer(String firstName, String lastName, String id, int age, String customerId, int purchaseCount) {
++        super(firstName, lastName, id, age);
++        this.customerId = customerId;
++        this.purchaseCount = purchaseCount;
++    }
++    public int getPurchaseCount(){
++        return purchaseCount;
++    }
++    public void setPurchaseCount(int purchaseCount){
++        this.purchaseCount = purchaseCount;
++    }
++
++    @Override
++    public String getInfo(){
++        return getFirstName() + getLastName() +" "+ this.customerId + " (" + getPurchaseCount() + " purchases)";
++    }
++}
+Index: homework-exercises/src/io/codelex/practice/Exercise2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/Exercise2.java b/homework-exercises/src/io/codelex/practice/Exercise2.java
+new file mode 100644
+--- /dev/null	(date 1664540036558)
++++ b/homework-exercises/src/io/codelex/practice/Exercise2.java	(date 1664540036558)
+@@ -0,0 +1,26 @@
++package io.codelex.practice;
++
++import java.time.LocalDate;
++import java.util.Arrays;
++import java.util.Scanner;
++
++public class Exercise2 {
++    public static LocalDate[] getServerUpdateDates(LocalDate date) {
++        LocalDate[] dates = new LocalDate[2];
++        LocalDate copy = date;
++        int counter = 0;
++        while(copy.getMonth() == date.plusDays(14).getMonth()){
++            dates[counter] = date.plusDays(14);
++            date = date.plusDays(14);
++            counter++;;
++        }
++        return dates;
++    }
++        public static void main (String[]args){
++            Scanner scanner = new Scanner(System.in);
++            System.out.println("Enter server launch year-month-date: ");
++            LocalDate serverLaunchDate = LocalDate.parse(scanner.next());
++
++            System.out.println(Arrays.toString(getServerUpdateDates(serverLaunchDate)));
++        }
++}
+Index: homework-exercises/src/io/codelex/oop/persons/Exercise2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/persons/Exercise2.java b/homework-exercises/src/io/codelex/oop/persons/Exercise2.java
+new file mode 100644
+--- /dev/null	(date 1664541497957)
++++ b/homework-exercises/src/io/codelex/oop/persons/Exercise2.java	(date 1664541497957)
+@@ -0,0 +1,13 @@
++package io.codelex.oop.persons;
++
++import java.time.LocalDate;
++
++public class Exercise2 {
++    public static void main(String[] args) {
++        Customer customer = new Customer("Peter", "Brown", "1", 20, "CID1234", 10);
++        System.out.println(customer.getInfo());
++
++        Employee employee = new Employee("Bob", "Burger", "2", 20, "Sales Manager", LocalDate.of(2015, 1, 1));
++        System.out.println(employee.getInfo());
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Rectangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Rectangle.java b/homework-exercises/src/io/codelex/oop/shapes/Rectangle.java
+new file mode 100644
+--- /dev/null	(date 1664546487640)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Rectangle.java	(date 1664546487640)
+@@ -0,0 +1,29 @@
++package io.codelex.oop.shapes;
++public class Rectangle extends Shape {
++    private double width;
++    private double height;
++
++    public Rectangle(double width, double height) {
++        super(4);
++        this.width = width;
++        this.height = height;
++    }
++
++    public double getWidth() {
++        return width;
++    }
++
++    public double getHeight() {
++        return height;
++    }
++
++    @Override
++    public double getArea() {
++        return width * height;
++    }
++
++    @Override
++    public double getPerimeter() {
++        return 2 * (width + height);
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Triangle.java b/homework-exercises/src/io/codelex/oop/shapes/Triangle.java
+new file mode 100644
+--- /dev/null	(date 1664541386350)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Triangle.java	(date 1664541386350)
+@@ -0,0 +1,30 @@
++package io.codelex.oop.shapes;
++
++public class Triangle extends Shape{
++    private double width;
++    private double height;
++
++    public Triangle(double width, double height) {
++        super(3);
++        this.width = width;
++        this.height = height;
++    }
++
++    public double getWidth() {
++        return width;
++    }
++
++    public double getHeight() {
++        return height;
++    }
++
++    @Override
++    public double getArea() {
++        return width * height / 2;
++    }
++
++    @Override
++    public double getPerimeter() {
++        return width + height + Math.sqrt(width * width + height * height);
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Exercise1and9and10.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Exercise1and9and10.java b/homework-exercises/src/io/codelex/oop/shapes/Exercise1and9and10.java
+new file mode 100644
+--- /dev/null	(date 1664549317286)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Exercise1and9and10.java	(date 1664549317286)
+@@ -0,0 +1,30 @@
++package io.codelex.oop.shapes;
++
++public class Exercise1and9and10 {
++    public static void main(String[] args) {
++        Shape[] shapes = new Shape[3];
++        shapes[0] = new Triangle(3, 4);
++        shapes[1] = new Rectangle(3, 4);
++        shapes[2] = new Hexagon(3);
++
++        Shape3D[] shapes3D = new Shape3D[2];
++        shapes3D[0] = new Qube(3, 4, 5);
++        shapes3D[1] = new Cone(3, 4);
++
++        for (Shape shape : shapes) {
++            System.out.println("Shape: " + shape.getClass().getSimpleName());
++            System.out.println("Number of sides: " + shape.getNumSides());
++            System.out.println("Area: " + shape.getArea());
++            System.out.println("Perimeter: " + shape.getPerimeter());
++            System.out.println();
++        }
++        for (Shape3D shape3D : shapes3D) {
++            System.out.println("Shape: " + shape3D.getClass().getSimpleName());
++            System.out.println("Number of sides: " + shape3D.getNumSides());
++            System.out.println("Area: " + shape3D.getArea());
++            System.out.println("Perimeter: " + shape3D.getPerimeter());
++            System.out.println("Volume: " + shape3D.getVolume());
++            System.out.println();
++        }
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/summary/README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/summary/README.md b/homework-exercises/src/io/codelex/oop/summary/README.md
+new file mode 100644
+--- /dev/null	(date 1662399971575)
++++ b/homework-exercises/src/io/codelex/oop/summary/README.md	(date 1662399971575)
+@@ -0,0 +1,113 @@
++# Practice
++
++## Exercise #1 - LazyBox
++Sometimes initializing of an object takes a long time for example when there is a need to do a lot of calculations
++before object can be created. Objects that are initialized only upon request are called lazy objects.
++
++Create a class LazyBox that can store any object but will actually create it only when someone requests to take it 
++out of the box.
++
++Example of functionality:
++```
++    public static void main(String[] args) {
++
++        LazyBox<Integer> box = new LazyBox<>(MainProgram::calculate);
++        
++        //First time calling get - it should calculate the value
++        Integer contents = box.get();
++        
++        //Second time calling get - it should just return previously calculated value and not calculate again
++        Integer contents2 = box.get();
++    }
++
++    public static Integer calculate() {
++        return 200;
++    }
++```
++
++## Exercise #2 - Orders and invoices
++
++There is a necessity to create orders with items and afterwards invoices. Items can 
++be of three different types - food, electronics and household items.
++
++Objects from business viewpoint:
++* Item - available data: name and price without VAT
++* Order - should contain list of items
++* Invoice - should contain list of items, total sum without and with VAT, invoice can have two statuses: approved and sent
++
++Classes from programmers perspective:
++* Item - interface, should contain methods that return name, price and fullInfo
++* AbstractItem - abstract class, should implement Item interface and contain functionality and variables that are common for all types of items
++* FoodItem - class, should extend AbstractItem, should also contain date of expiration
++  * fullInfo method should return "{name}, {price} EUR, best before: {date of expiration}", for example: "Milk, 0.75 EUR, best before: 01.04.2022"
++  * constructor should receive name, price and bestBefore date
++* ElectronicsItem - class, should extend AbstractItem, should also contain power in watts (W)
++  * fullInfo method should return "{name}, {price} EUR, power: {power}W", for example: "Radio, 25.00 EUR, power: 100W"
++  * constructor should receive name, price and power
++* HouseholdItem - class, should extend AbstractItem, should also contain color (as text)
++  * fullInfo method should return "{name}, {price} EUR, color: {color}", for example: "Bucket, 5.00 EUR, color: red"
++  * constructor should receive name, price and color
++* Order - class, should contain list of items, should have method to add items and to return text that contains list of items
++* InvoiceStatus - enum with two values APPROVED, SENT
++* Invoice - class, should contain list of items, invoice number, invoice status, price without VAT, price with VAT, constructor should accept order and invoice number. 
++By default invoice is with status APPROVED. Invoice should not be editable, it should only contain method send() that will change its status to SENT. 
++Invoice should contain method that returns text with formatted invoice. See example below:
++
++```
++===================================================
++= INVOICE NUMBER: INV123                          =
++= STATUS: APPROVED                                =
++= 1. Milk, 0.75 EUR, best before: 01.04.2022      =
++= 2. Radio, 25.00 EUR, power: 100W                =
++= 3. Bucket, 5.00 EUR, color: red                 =
++= SUM: 30.75 EUR                                  =
++= VAT (21%): 6.46 EUR                             =
++= TOTAL: 37.21 EUR                                =
++===================================================
++```
++Test the functionality by creating a class OrderProgram with main method.
++* Create items with all three types (food, electronics, household)
++* Create order, add items to the order.
++* Create invoice from the order.
++* Print out invoice.
++
++####NB! No other class except OrderProgram should contain System.out.print / println etc.
++
++## Exercise #3 - Orders and invoices pt 2.
++
++Add functionality to previously created classes.
++
++* If invoice is being created with and empty order - throw error WrongOrderException with appropriate error message
++* If trying to add to order food item with expiration date less than today - throw error BadFoodException (think how 
++to check if the item that is being added is food item, is there a way to check if object is actually FoodItem?)
++
++## Exercise #4 - Orders and invoices pt 3.
++
++* It should be possible to add to order not only items but also other services, like for example - packing of items.
++  * Create interface SellableThing that should contain the same methods as Item interface
++  * Edit interface Item so that it extends SellableThing and remove all methods from Item (code should still work)
++  * Create interface Service that extends SellableThing
++  * Create class ItemPacking that implements Service
++    * it should contain static final values - name "Item packing" and price 5, those values must be returned by methods 
++    that are required by implementing Service interface
++    * method that returns fullInfo should just return "Item packing, 5.00 EUR"
++  * Modify the Order class so that it can store both Services and Items. It can be done by using SellableThing interface.
++  The method to add items to order should look like something like this: `public void addItem(SellableItem item) { .. }`.
++  Also the list type of items in the Order should be changed to `List<SellableItem>`
++  * Modify the Invoice class and also change types to `SellableItem` instead of `Item` (code should work)
++* Check that you can add also ItemPacking to the order and once we create Invoice from the order it can be printed out 
++together with other items, for example:
++
++```
++===================================================
++= INVOICE NUMBER: INV123                          =
++= STATUS: APPROVED                                =
++= 1. Milk, 0.75 EUR, best before: 01.04.2022      =
++= 2. Radio, 25.00 EUR, power: 100W                =
++= 3. Bucket, 5.00 EUR, color: red                 =
++= 4. Item packing, 5.00 EUR                       =
++= SUM: 35.75 EUR                                  =
++= VAT (21%): 7.51 EUR                             =
++= TOTAL: 43,26 EUR                                =
++===================================================
++```
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/oop/README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/README.md b/homework-exercises/src/io/codelex/oop/README.md
+new file mode 100644
+--- /dev/null	(date 1664541386373)
++++ b/homework-exercises/src/io/codelex/oop/README.md	(date 1664541386373)
+@@ -0,0 +1,140 @@
++# Practice
++
++### NB: Create each exercise in separate package
++
++## Exercise #1
++
++Package: shapes
++1) Write an abstract class Shape 
++   * Data members: numSides (number of sides)
++   * Constructor: initialize numSides
++   * Concrete method: get method for numSides
++   * Abstract methods: getArea(), getPerimeter()
++2) Write a concrete subclass Rectangle
++   * Data members: width, height
++3) Write a concrete subclass Triangle
++   * Data members: width, height
++4) In another class, write a main method to define a Rectangle and a Triangle and test their functionality
++
++## Exercise #2
++
++Package: persons
++1) Write an abstract class Person
++    * Data members: firstName, lastName, id (String), age
++   * Constructor: initialize all data variables
++   * Concrete methods: getFirstName, getLastName, getId, getAge
++   * Abstract methods: getInfo that returns String
++2) Write a concrete subclass Employee
++   * Data members: position (String, for ex. "Accountant"), startedWorking (date)
++   * Constructor: initialize all data variables
++   * Methods: getWorkExperience - returns int with how many full years employee has been working in company
++   * getInfo should in company, for example "Accountant John Brown (7 years)"
++3) Write a concrete subclass Customer
++   * Data members: customerId (String), purchaseCount
++   * Constructor: initialize all data variables
++   * Methods: getPurchaseCount, setPurchaseCount
++   * getInfo should return firstName + lastName + customerId + purchase count, for example "Peter Brown CID1234 (10 purchases)"
++4) Write separate class where to test functionality
++
++## Exercise #3
++
++Package: cars
++
++#### First part
++
++1) Create a Manufacturer class that will contain fields: name, year of establishment, country. Include all necessary methods and constructor parameters. Implement the hashCode() and equals() methods.
++
++2) Create a Car class that will contain fields: name, model, price, year of manufacture, manufacturer list (Manufacturer), and engine type (represented as the enum class, e.g. V12, V8, V6, S6, S4, S3). Include all necessary methods and constructor parameters. Implement the hashcode() and equals() methods.
++
++3) Create a class to test functionality
++
++#### Second part
++
++Create a CarService class that will contain a list of cars and implement the following methods:
++1. adding cars to the list,
++2. removing a car from the list,
++3. returning a list of all cars,
++4. returning cars with a V12 engine,
++5. returning cars produced before 1999,
++6. returning the most expensive car,
++7. returning the cheapest car,
++8. returning the car with at least 3 manufacturers,
++9. returning a list of all cars sorted according to the passed parameter: ascending / descending,
++10. checking if a specific car is on the list,
++11. returning a list of cars manufactured by a specific manufacturer,
++12. returning the list of cars manufactured by the manufacturer with the year of establishment <,>, <=,> =,
++    =,! = from the given.
++
++Add class to test all methods - adding, removing, searching etc. (or add testing to previously created class in the first part)
++
++## Exercise #4
++
++Package: runners
++Create an enum Runner class with constants BEGINNER, INTERMEDIATE, ADVANCED. Enum should have two
++parameters:
++* minimum time of running a marathon in minutes
++* maximum running time of the marathon in minutes
++
++In addition, the Runner enum should contain the static getFitnessLevel() method, which takes any time
++result of a marathon run, and as a result should return a specific Runner object based on the given time.
++
++## Exercise #5
++
++Package: imperialToMetric
++
++1) Create a ConversionType enum class with the constants METERS_TO_YARDS, YARDS_TO_METERS, CENTIMETERS_TO_ICHES, INCHES_TO_CENTIMETERS, KILOMETERS_TO_MILES, MILES_TO_KILOMETERS. Enum should have a Converter type parameter used to perform calculations for a given type.
++
++2) Then create a MeasurementConverter class that will have the convert(int value, ConvertionType conversionType) method and based on the value and type of conversion, used the Converter of the given type and returned the result.
++
++3) Create class to test functionality
++
++## Exercise #6
++
++Package: parcels
++
++Parcel validator
++1) Create interface Validatable, which will include a method boolean validate() in its declaration.
++
++2) Create a Parcel class with the parameters:
++   • int xLength
++   • int yLength
++   • int zLength
++   • float weight
++   • boolean isExpress
++
++3) Implement the Validatable interface in Parcel class
++
++The validate() method should verify that the sum of the dimensions (x, y, z) does not exceed 300, whether each size is not less than 30, whether the weight does not exceed 30.0 for isExpress = false or 15.0 for isExpress = true. In case of errors, it should inform the user about them.
++
++4) Create class to test functionality
++
++
++## Exercise #7
++
++Package: computers
++
++Create a Computer class with fields defining computer features: processor, ram, graphics card, company and model. Implement setters, getters, constructor with all fields, toString(), equals() and hashcode() methods.
++Instantiate several objects and check how the methods work.
++
++
++## Exercise #8
++
++Package: computers
++
++Create a Laptop class extending the Computer class from the previous task. The Laptop class should additionally contain the battery parameter.
++Implement additional getters, setters, constructor and overwrite the toString(), equals() and hashcode() methods accordingly.
++Use a reference to parent class methods (from Laptop class call Computer methods).
++
++## Exercise #9
++
++Create an abstract Shape class with the abstract methods calculatePerimeter() for calculating the
++perimeter and calculateArea() for calculating the area.
++
++Create Rectangle, Triangle, Hexagon classes, extending the Shape class, and implementing abstract methods accordingly. Verify the solution correctness.
++
++## Exercise #10
++
++Create an abstract 3DShape class that extends the Shape class from the previous task. Add an additional
++method calculateVolume().
++
++Create Cone and Qube classes by extending the 3DShape class, properly implementing abstract methods. Verify the solution correctness.
+\ No newline at end of file
+Index: homework-exercises/src/io/codelex/oop/shapes/Shape.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Shape.java b/homework-exercises/src/io/codelex/oop/shapes/Shape.java
+new file mode 100644
+--- /dev/null	(date 1664541386333)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Shape.java	(date 1664541386333)
+@@ -0,0 +1,16 @@
++package io.codelex.oop.shapes;
++
++public abstract class Shape {
++    private int numSides;
++
++    public Shape(int numSides) {
++        this.numSides = numSides;
++    }
++
++    public int getNumSides() {
++        return numSides;
++    }
++
++    public abstract double getArea();
++    public abstract double getPerimeter();
++}
+Index: homework-exercises/src/io/codelex/oop/summary/generics/Printer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/summary/generics/Printer.java b/homework-exercises/src/io/codelex/oop/summary/generics/Printer.java
+new file mode 100644
+--- /dev/null	(date 1662399971576)
++++ b/homework-exercises/src/io/codelex/oop/summary/generics/Printer.java	(date 1662399971576)
+@@ -0,0 +1,23 @@
++package io.codelex.oop.summary.generics;
++
++import java.math.BigDecimal;
++
++public class Printer {
++
++    //Fix this class so that any object, not only BigDecimal can be printed
++    //Test the functionality
++
++    private final BigDecimal thingToPrint;
++
++    public Printer(BigDecimal thingToPrint) {
++        this.thingToPrint = thingToPrint;
++    }
++
++    public void print() {
++        System.out.println(thingToPrint);
++    }
++
++    public BigDecimal getThingToPrint() {
++        return thingToPrint;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/summary/generics/Combiner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/summary/generics/Combiner.java b/homework-exercises/src/io/codelex/oop/summary/generics/Combiner.java
+new file mode 100644
+--- /dev/null	(date 1662399971575)
++++ b/homework-exercises/src/io/codelex/oop/summary/generics/Combiner.java	(date 1662399971575)
+@@ -0,0 +1,14 @@
++package io.codelex.oop.summary.generics;
++
++import java.math.BigDecimal;
++
++public class Combiner {
++
++    //Fix this method so it can receive two any kind of objects
++    //Test the functionality
++
++    public static String combineTwoItems(Integer first, BigDecimal second) {
++        return "First item: " + first.toString() + "; Second item: " + second.toString();
++    }
++
++}
+Index: homework-exercises/src/io/codelex/oop/summary/generics/StorageHouse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/summary/generics/StorageHouse.java b/homework-exercises/src/io/codelex/oop/summary/generics/StorageHouse.java
+new file mode 100644
+--- /dev/null	(date 1662399971576)
++++ b/homework-exercises/src/io/codelex/oop/summary/generics/StorageHouse.java	(date 1662399971576)
+@@ -0,0 +1,30 @@
++package io.codelex.oop.summary.generics;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Optional;
++
++public class StorageHouse {
++
++    //Fix this class so that storage house can contain other types of objects not only numbers
++    //Test the functionality
++
++    List<Integer> items = new ArrayList<>();
++
++    public StorageHouse(Integer firstItem) {
++        items.add(firstItem);
++    }
++
++    public void addMoreItems(Integer item) {
++        items.add(item);
++    }
++
++    public Optional<Integer> getMaybeFirstItem() {
++        return items.stream().findFirst();
++    }
++
++    public void printItems() {
++        items.forEach(System.out::println);
++    }
++
++}
+Index: homework-exercises/src/io/codelex/practice/Exercise3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/Exercise3.java b/homework-exercises/src/io/codelex/practice/Exercise3.java
+new file mode 100644
+--- /dev/null	(date 1664540036549)
++++ b/homework-exercises/src/io/codelex/practice/Exercise3.java	(date 1664540036549)
+@@ -0,0 +1,23 @@
++package io.codelex.practice;
++
++import java.time.LocalDate;
++
++public class Exercise3 {
++    public static void main(String[] args) {
++        LocalDate  firstStart = LocalDate.of(2022, 1, 1);
++        LocalDate firstEnd = LocalDate.of(2022, 1, 15);
++        DatePeriod firstPeriod = new DatePeriod(firstStart, firstEnd);
++
++        LocalDate secondStart = LocalDate.of(2022, 1, 10);
++        LocalDate secondEnd = LocalDate.of(2022, 1, 25);
++        DatePeriod secondPeriod = new DatePeriod(secondStart, secondEnd);
++
++        DatePeriod overlap = firstPeriod.intersection(secondPeriod);
++        if (overlap == null) {
++            System.out.println("No overlap");
++        } else {
++            System.out.println("Overlap: " + overlap.getStart() + " - " + overlap.getEnd());
++        }
++
++    }
++}
+Index: homework-exercises/src/io/codelex/practice/DatePeriod.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/practice/DatePeriod.java b/homework-exercises/src/io/codelex/practice/DatePeriod.java
+new file mode 100644
+--- /dev/null	(date 1664539885521)
++++ b/homework-exercises/src/io/codelex/practice/DatePeriod.java	(date 1664539885521)
+@@ -0,0 +1,29 @@
++package io.codelex.practice;
++
++import java.time.LocalDate;
++
++public class DatePeriod {
++    private final LocalDate start;
++    private final LocalDate end;
++
++    public DatePeriod(LocalDate start, LocalDate end) {
++        this.start = start;
++        this.end = end;
++    }
++    public LocalDate getStart() {
++        return start;
++    }
++
++    public LocalDate getEnd() {
++        return end;
++    }
++
++    public DatePeriod intersection(DatePeriod secondPeriod) {
++        if (this.start.isAfter(secondPeriod.end) || this.end.isBefore(secondPeriod.start)) {
++            return null;
++        }
++        LocalDate start = this.start.isAfter(secondPeriod.start) ? this.start : secondPeriod.start;
++        LocalDate end = this.end.isBefore(secondPeriod.end) ? this.end : secondPeriod.end;
++        return new DatePeriod(start, end);
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Qube.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Qube.java b/homework-exercises/src/io/codelex/oop/shapes/Qube.java
+new file mode 100644
+--- /dev/null	(date 1664549317275)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Qube.java	(date 1664549317275)
+@@ -0,0 +1,41 @@
++package io.codelex.oop.shapes;
++
++public class Qube extends Shape3D{
++    private double width;
++    private double height;
++    private double depth;
++
++    public Qube(double width, double height, double depth) {
++        super(6);
++        this.width = width;
++        this.height = height;
++        this.depth = depth;
++    }
++
++    public double getWidth() {
++        return width;
++    }
++
++    public double getHeight() {
++        return height;
++    }
++
++    public double getDepth() {
++        return depth;
++    }
++
++    @Override
++    public double getArea() {
++        return 2 * (width * height + width * depth + height * depth);
++    }
++
++    @Override
++    public double getPerimeter() {
++        return 4 * (width + height + depth);
++    }
++
++    @Override
++    public double getVolume() {
++        return width * height * depth;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/computers/Laptop.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/computers/Laptop.java b/homework-exercises/src/io/codelex/oop/computers/Laptop.java
+new file mode 100644
+--- /dev/null	(date 1664548846106)
++++ b/homework-exercises/src/io/codelex/oop/computers/Laptop.java	(date 1664548846106)
+@@ -0,0 +1,46 @@
++package io.codelex.oop.computers;
++
++import java.util.Objects;
++
++public class Laptop extends Computer {
++    private String batteryType;
++
++    public Laptop(String processor, String ram, String graphicsCard, String company, String model, String batteryType) {
++        super(processor, ram, graphicsCard, company, model);
++        this.batteryType = batteryType;
++    }
++
++    public String getBatteryType() {
++        return batteryType;
++    }
++
++    public void setBatteryType(String batteryType) {
++        this.batteryType = batteryType;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof Laptop laptop)) return false;
++        if (!super.equals(o)) return false;
++        return getBatteryType().equals(laptop.getBatteryType());
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(super.hashCode(), getBatteryType());
++    }
++
++    @Override
++    public String toString() {
++        return "Laptop{" +
++                "processor='" + processor + '\'' +
++                ", ram='" + ram + '\'' +
++                ", graphicsCard='" + graphicsCard + '\'' +
++                ", company='" + company + '\'' +
++                ", model='" + model + '\'' +
++                ", batteryType='" + batteryType + '\'' +
++
++                '}';
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Hexagon.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Hexagon.java b/homework-exercises/src/io/codelex/oop/shapes/Hexagon.java
+new file mode 100644
+--- /dev/null	(date 1664549026723)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Hexagon.java	(date 1664549026723)
+@@ -0,0 +1,24 @@
++package io.codelex.oop.shapes;
++
++public class Hexagon extends Shape {
++    private double side;
++
++    public Hexagon(double side) {
++        super(6);
++        this.side = side;
++    }
++
++    public double getSide() {
++        return side;
++    }
++
++    @Override
++    public double getArea() {
++        return 3 * Math.sqrt(3) * side * side / 2;
++    }
++
++    @Override
++    public double getPerimeter() {
++        return 6 * side;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Shape3D.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Shape3D.java b/homework-exercises/src/io/codelex/oop/shapes/Shape3D.java
+new file mode 100644
+--- /dev/null	(date 1664549317385)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Shape3D.java	(date 1664549317385)
+@@ -0,0 +1,15 @@
++package io.codelex.oop.shapes;
++
++public abstract class Shape3D extends Shape {
++    private int numSides;
++
++    public Shape3D(int numSides) {
++        super(numSides);
++    }
++
++    public int getNumSides() {
++        return numSides;
++    }
++
++    public abstract double getVolume();
++}
+Index: homework-exercises/src/io/codelex/oop/shapes/Cone.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/shapes/Cone.java b/homework-exercises/src/io/codelex/oop/shapes/Cone.java
+new file mode 100644
+--- /dev/null	(date 1664549317397)
++++ b/homework-exercises/src/io/codelex/oop/shapes/Cone.java	(date 1664549317397)
+@@ -0,0 +1,35 @@
++package io.codelex.oop.shapes;
++
++public class Cone extends Shape3D{
++    private double radius;
++    private double height;
++
++    public Cone(double radius, double height) {
++        super(1);
++        this.radius = radius;
++        this.height = height;
++    }
++
++    public double getRadius() {
++        return radius;
++    }
++
++    public double getHeight() {
++        return height;
++    }
++
++    @Override
++    public double getVolume() {
++        return Math.PI * Math.pow(radius, 2) * height / 3;
++    }
++
++    @Override
++    public double getArea() {
++        return Math.PI * radius * (radius + Math.sqrt(Math.pow(height, 2) + Math.pow(radius, 2)));
++    }
++
++    @Override
++    public double getPerimeter() {
++        return 0;
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/parcels/Exercise6.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/parcels/Exercise6.java b/homework-exercises/src/io/codelex/oop/parcels/Exercise6.java
+new file mode 100644
+--- /dev/null	(date 1664547791728)
++++ b/homework-exercises/src/io/codelex/oop/parcels/Exercise6.java	(date 1664547791728)
+@@ -0,0 +1,8 @@
++package io.codelex.oop.parcels;
++
++public class Exercise6 {
++    public static void main(String[] args) {
++        Parcel parcel = new Parcel(36, 40, 50, 50,false);
++        System.out.println(parcel.validate());
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/computers/Computer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/computers/Computer.java b/homework-exercises/src/io/codelex/oop/computers/Computer.java
+new file mode 100644
+--- /dev/null	(date 1664548625917)
++++ b/homework-exercises/src/io/codelex/oop/computers/Computer.java	(date 1664548625917)
+@@ -0,0 +1,78 @@
++package io.codelex.oop.computers;
++
++import java.util.Objects;
++
++public class Computer {
++    String processor, ram, graphicsCard, company, model;
++
++    public Computer(String processor, String ram, String graphicsCard, String company, String model) {
++        this.processor = processor;
++        this.ram = ram;
++        this.graphicsCard = graphicsCard;
++        this.company = company;
++        this.model = model;
++    }
++
++    public String getProcessor() {
++        return processor;
++    }
++
++    public void setProcessor(String processor) {
++        this.processor = processor;
++    }
++
++    public String getRam() {
++        return ram;
++    }
++
++    public void setRam(String ram) {
++        this.ram = ram;
++    }
++
++    public String getGraphicsCard() {
++        return graphicsCard;
++    }
++
++    public void setGraphicsCard(String graphicsCard) {
++        this.graphicsCard = graphicsCard;
++    }
++
++    public String getCompany() {
++        return company;
++    }
++
++    public void setCompany(String company) {
++        this.company = company;
++    }
++
++    public String getModel() {
++        return model;
++    }
++
++    public void setModel(String model) {
++        this.model = model;
++    }
++
++    @Override
++    public boolean equals(Object o) {
++        if (this == o) return true;
++        if (!(o instanceof Computer computer)) return false;
++        return getProcessor().equals(computer.getProcessor()) && getRam().equals(computer.getRam()) && getGraphicsCard().equals(computer.getGraphicsCard()) && getCompany().equals(computer.getCompany()) && getModel().equals(computer.getModel());
++    }
++
++    @Override
++    public int hashCode() {
++        return Objects.hash(getProcessor(), getRam(), getGraphicsCard(), getCompany(), getModel());
++    }
++
++    @Override
++    public String toString() {
++        return "Computer{" +
++                "processor='" + processor + '\'' +
++                ", ram='" + ram + '\'' +
++                ", graphicsCard='" + graphicsCard + '\'' +
++                ", company='" + company + '\'' +
++                ", model='" + model + '\'' +
++                '}';
++    }
++}
+Index: homework-exercises/src/io/codelex/oop/computers/Exercise7.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/homework-exercises/src/io/codelex/oop/computers/Exercise7.java b/homework-exercises/src/io/codelex/oop/computers/Exercise7.java
+new file mode 100644
+--- /dev/null	(date 1664549026705)
++++ b/homework-exercises/src/io/codelex/oop/computers/Exercise7.java	(date 1664549026705)
+@@ -0,0 +1,19 @@
++package io.codelex.oop.computers;
++
++public class Exercise7 {
++
++    public static void main(String[] args) {
++        Computer computer = new Computer("i7", "16GB", "GTX 1080", "Dell", "XPS 15");
++        Computer computer2 = new Computer("i7", "16GB", "GTX 1080", "Dell", "XPS 15");
++        Computer computer3 = new Computer("i7", "16GB", "GTX 1080", "Dell", "XPS 16");
++        Laptop laptop = new Laptop("i7", "16GB", "GTX 1080", "Dell", "XPS 15", "Lithium");
++        Laptop laptop2 = new Laptop("i7", "16GB", "GTX 1080", "Dell", "XPS 15", "Lithium");
++
++        System.out.println(computer.equals(computer2));
++        System.out.println(computer.equals(computer3));
++        System.out.println(laptop.equals(laptop2));
++        System.out.println(laptop.equals(computer));
++        System.out.println(laptop2.toString());
++        System.out.println(computer.hashCode());
++    }
++}
